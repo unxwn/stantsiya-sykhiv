@@ -3,11 +3,10 @@ language = "uk"
 multilingual = false
 src = "docs"
 
-# Замініть авторство проєкта на своє
-authors = ["Ivan \"ukrustacean\" Dereviankin"]
+# Додайте себе в автори. Останій видаляє цей коментар
+authors = ["Myroslav \"unxwn\" Polishchuk"]
 
-# Змініть назву проєкта на свою
-title = "Назва проєкту"
+title = "Станція Сихів"
 
 [preprocessor.plantuml]
 plantuml-cmd = "http://www.plantuml.com/plantuml"
