@@ -81,13 +81,16 @@
    mdbook serve
    ```
 
-Доступ до локально опублікованої версії [http://localhost:8080](http://localhost:8080)
+Доступ до локально опублікованої версії через localhost з портом який у вас виділить (все буде в консолі).
 
 ## 👥 Автори
 - 🌸 [Поліщук Мирослав](https://github.com/unxwn) | 📩 TG: [@myroslav11](https://t.me/myroslav11)  
-- 💠 [Чекун Микола](https://github.com/chekunm) | 📩 TG: [@chekun_m](https://t.me/chekun_m)  
+- 💠 [Чекун Миколій](https://github.com/chekunm) | 📩 TG: [@chekun_m](https://t.me/chekun_m)  
 - 💠 [Рокицький Олександр](https://github.com/rokytskyii) | 📩 TG: [@rokytskyi](https://t.me/@rokytskyi)  
 - 💠 [Скубко Артем](https://github.com/jacedaichi) | 📩 TG: [@jacedaichi](https://t.me/@jacedaichi)  
+- 💠 [Бурденюк Дмитро](https://github.com/BuDi4ka) | 📩 TG: [@mar_kul](https://t.me/@mar_kul)  
+- 💠 [Лісовський Назар](https://github.com/Lisovskiy14) | 📩 TG: [@NazikSB](https://t.me/@NazikSB)  
+- 💠 [Шусторовчик Марк](https://github.com/hhyy28) | 📩 TG: [@Retrowaver1984](https://t.me/@Retrowaver1984)  
 
 ## 📌 Додаткова інформація
 
