@@ -4,7 +4,7 @@ multilingual = false
 src = "docs"
 
 # Додайте себе в автори. Останій видаляє цей коментар
-authors = ["Myroslav \"unxwn\" Polishchuk", "Artem \"jacedaichi\" Skubko"] 
+authors = ["Myroslav \"unxwn\" Polishchuk", "Artem \"jacedaichi\" Skubko", "Nazar \"Lisovskiy14\" Lisovskiy"]
 
 title = "Станція Сихів"
 
