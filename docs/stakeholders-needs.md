@@ -26,9 +26,9 @@
 
 ### Посилання
 
-- Agile Manifesto (https://agilemanifesto.org/)
-- PMBOK Guide (Project Management Body of Knowledge)
-- Опис SCRUM-методології (https://www.scrum.org/resources/scrum-guide)
+- [Agile Manifesto](https://agilemanifesto.org/)
+- [PMBOK Guide](Project Management Body of Knowledge)
+- [Опис SCRUM-методології](https://www.scrum.org/resources/scrum-guide)
 
 ## Короткий зміст
 
