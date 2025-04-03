@@ -31,10 +31,11 @@
         <!-- Custom theme stylesheets -->
 
 
-        <!-- Provide site root to javascript -->
+        <!-- Provide site root and default themes to javascript -->
         <script>
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc.js"></script>
@@ -44,8 +45,8 @@
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -59,7 +60,8 @@
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
-            var theme;
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
@@ -72,8 +74,8 @@
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var sidebar = null;
-            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
@@ -109,6 +111,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
@@ -187,123 +190,123 @@
 <h2 id="Характеристика-ділових-процесів"><a class="header" href="#Характеристика-ділових-процесів">Характеристика ділових процесів</a></h2>
 <h3 id="Бізнес-сценарій-Управління-завданнями"><a class="header" href="#Бізнес-сценарій-Управління-завданнями">Бізнес-сценарій: Управління завданнями</a></h3>
 <h3 id="Утворення-акаунту"><a class="header" href="#Утворення-акаунту">Утворення акаунту</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th>CreateAccount</th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Створення акаунту</td></tr>
-<tr><td>Учасники:</td><td>Користувач, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач не має акаунту в системі</td></tr>
-<tr><td>Результат:</td><td><div style="width:300px">Створено новий акаунт</div></td></tr>
-<tr><td>Виключні ситуації:</td><td>- Обов’язкові поля не заповнені — NullReferenceException<br>- Акаунт вже існує — UserAlreadyExistsException<br>- Пароль не відповідає вимогам — NotStrongPasswordException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Користувач відкриває форму реєстрації<br>2. Вводить необхідні дані<br>3. Натискає "Зареєструватися"<br>4. Система перевіряє коректність даних<br>5. Якщо всі перевірки пройдені, акаунт створюється</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><code>CreateAccount</code></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Створення акаунту</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач не має акаунту в системі</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left"><div style="width:300px">Створено новий акаунт</div></td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Обов’язкові поля не заповнені — <code>NullReferenceException</code><br>- Акаунт вже існує — <code>UserAlreadyExistsException</code><br>- Пароль не відповідає вимогам — <code>NotStrongPasswordException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває форму реєстрації<br>2. Вводить необхідні дані<br>3. Натискає "Зареєструватися"<br>4. Перевіряється коректність введених даних<br>5. Якщо всі перевірки пройдені, створюється акаунт</td></tr>
 </tbody></table>
 </div>
 <h3 id="Редагування-інформації-акаунту"><a class="header" href="#Редагування-інформації-акаунту">Редагування інформації акаунту</a></h3>
-<div class="table-wrapper"><table><thead><tr><th style="text-align: center">ID</th><th>EditAccount</th></tr></thead><tbody>
-<tr><td style="text-align: center">Назва:</td><td>Редагування інформації акаунту</td></tr>
-<tr><td style="text-align: center">Учасники:</td><td>Користувач, система</td></tr>
-<tr><td style="text-align: center">Передумови:</td><td>Користувач авторизований</td></tr>
-<tr><td style="text-align: center">Результат:</td><td><div style="width:500px">Оновлена інформація про акаунт</div></td></tr>
-<tr><td style="text-align: center">Виключні ситуації:</td><td>- Некоректний формат даних — InvalidDataException</td></tr>
-<tr><td style="text-align: center">Основний сценарій:</td><td>1. Користувач переходить у налаштування акаунту<br>2. Вносить зміни<br>3. Натискає "Зберегти"<br>4. Система перевіряє коректність введених даних<br>5. Якщо все коректно, система оновлює інформацію</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><code>EditAccount</code></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Редагування інформації акаунту</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач авторизований</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left"><div style="width:500px">Оновлена інформація про акаунт</div></td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Некоректний формат даних — <code>InvalidDataException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач переходить у налаштування акаунту<br>2. Вносить зміни<br>3. Натискає "Зберегти"<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, оновлюється інформація про акаунт</td></tr>
 </tbody></table>
 </div>
 <h3 id="Видалення-акаунту"><a class="header" href="#Видалення-акаунту">Видалення акаунту</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th>DeleteAccount</th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Видалення акаунту</td></tr>
-<tr><td>Учасники:</td><td>Користувач, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач авторизований</td></tr>
-<tr><td>Результат:</td><td>Акаунт видалено</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Користувач не підтвердив видалення — CancelledOperationException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Користувач переходить у налаштування<br>2. Обирає "Видалити акаунт"<br>3. Підтверджує дію<br>4. Система видаляє акаунт</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><code>DeleteAccount</code></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Видалення акаунту</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач авторизований</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Акаунт видалено</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Користувач не підтвердив видалення — <code>CancelledOperationException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач переходить у налаштування<br>2. Обирає "Видалити акаунт"<br>3. Підтверджує дію<br>4. Видаляється акаунт</td></tr>
 </tbody></table>
 </div>
 <h3 id="Створення-проєкту"><a class="header" href="#Створення-проєкту">Створення проєкту</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">CreateProject</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Створення проєкту</td></tr>
-<tr><td>Учасники:</td><td>Користувач, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач авторизований</td></tr>
-<tr><td>Результат:</td><td>Створено новий проєкт</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Некоректно введені дані — InvalidDataException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Користувач натискає "Створити проєкт"<br>2. Заповнює необхідні поля<br>3. Підтверджує дію<br>4. Система перевіряє дані і створює проєкт</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>CreateProject</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Створення проєкту</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач авторизований</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Створено новий проєкт</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Некоректно введені дані — <code>InvalidDataException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач натискає "Створити проєкт"<br>2. Заповнює необхідні поля<br>3. Підтверджує дію<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, створюється проєкт</td></tr>
 </tbody></table>
 </div>
 <h3 id="Редагування-проєкту"><a class="header" href="#Редагування-проєкту">Редагування проєкту</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">EditProject</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Редагування проєкту</td></tr>
-<tr><td>Учасники:</td><td>Користувач, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач має дозвіл на редагування</td></tr>
-<tr><td>Результат:</td><td>Оновлена інформація про проєкт</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Доступ заборонено — AccessDeniedException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Користувач відкриває проєкт<br>2. Вносить зміни<br>3. Натискає "Зберегти"<br>4. Система перевіряє дані і зберігає зміни</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>EditProject</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Редагування проєкту</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач має дозвіл на редагування</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Оновлена інформація про проєкт</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Доступ заборонено — <code>AccessDeniedException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває проєкт<br>2. Вносить зміни<br>3. Натискає "Зберегти"<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, зберігаються зміни</td></tr>
 </tbody></table>
 </div>
 <h3 id="Видалення-проєкту"><a class="header" href="#Видалення-проєкту">Видалення проєкту</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">DeleteProject</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Видалення проєкту</td></tr>
-<tr><td>Учасники:</td><td>Користувач, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач має права на видалення</td></tr>
-<tr><td>Результат:</td><td>Проєкт видалено</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Доступ заборонено — AccessDeniedException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Користувач відкриває проєкт<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Система видаляє проєкт</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>DeleteProject</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Видалення проєкту</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач має права на видалення</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Проєкт видалено</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Доступ заборонено — <code>AccessDeniedException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває проєкт<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Видаляється проєкт</td></tr>
 </tbody></table>
 </div>
 <h3 id="Додавання-учасників"><a class="header" href="#Додавання-учасників">Додавання учасників</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">AddMembers</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Додавання учасників у проєкт</td></tr>
-<tr><td>Учасники:</td><td>Адміністратор, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач має права на додавання</td></tr>
-<tr><td>Результат:</td><td>Додані нові учасники</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Доступ заборонено — AccessDeniedException<br>- Користувач уже в команді — UserAlreadyInTeamException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Адміністратор відкриває налаштування команди<br>2. Додає нових учасників, вводячи їхню пошту або ID<br>3. Система перевіряє дані та додає користувачів</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>AddMembers</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Додавання учасників у проєкт</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Адміністратор, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач має права на додавання</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Додані нові учасники</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Доступ заборонено — <code>AccessDeniedException</code><br>- Користувач уже в команді — <code>UserAlreadyInTeamException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Адміністратор відкриває налаштування команди<br>2. Додає нових учасників, вводячи їхню пошту або ID<br>3. Перевіряється коректність введених даних<br>4. Якщо все коректно, додаються учасники</td></tr>
 </tbody></table>
 </div>
 <h3 id="Редагування-дозволів-учасників"><a class="header" href="#Редагування-дозволів-учасників">Редагування дозволів учасників</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">EditMemberPermissions</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Редагування дозволів учасників</td></tr>
-<tr><td>Учасники:</td><td>Адміністратор, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач має права адміністратора</td></tr>
-<tr><td>Результат:</td><td>Оновлені дозволи учасників</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Доступ заборонено — AccessDeniedException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Адміністратор відкриває список учасників<br>2. Змінює права доступу для конкретного користувача<br>3. Система оновлює інформацію</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>EditMemberPermissions</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Редагування дозволів учасників</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Адміністратор, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач має права адміністратора</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Оновлені дозволи учасників</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Доступ заборонено — <code>AccessDeniedException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Адміністратор відкриває список учасників<br>2. Змінює права доступу для конкретного користувача<br>3. Перевіряється коректність введених даних<br>4. Якщо все коректно, зберігаються зміни</td></tr>
 </tbody></table>
 </div>
 <h3 id="Видалення-учасників"><a class="header" href="#Видалення-учасників">Видалення учасників</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">RemoveMembers</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Видалення учасників із проєкту</td></tr>
-<tr><td>Учасники:</td><td>Адміністратор, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач має права на видалення</td></tr>
-<tr><td>Результат:</td><td>Учасника видалено з проєкту</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Доступ заборонено — AccessDeniedException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Адміністратор відкриває список учасників<br>2. Обирає учасника для видалення<br>3. Підтверджує видалення<br>4. Система видаляє учасника</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>RemoveMembers</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Видалення учасників із проєкту</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Адміністратор, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач має права на видалення</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Учасника видалено з проєкту</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Доступ заборонено — <code>AccessDeniedException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Адміністратор відкриває список учасників<br>2. Обирає учасників для видалення<br>3. Підтверджує дію<br>4. Видаляються учасники</td></tr>
 </tbody></table>
 </div>
 <h3 id="Створення-завдання"><a class="header" href="#Створення-завдання">Створення завдання</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">CreateTask</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Створення завдання</td></tr>
-<tr><td>Учасники:</td><td>Користувач, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач має права на створення завдань у проєкті</td></tr>
-<tr><td>Результат:</td><td>Створено нове завдання</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Некоректно введені дані — InvalidDataException<br>- Доступ заборонено — AccessDeniedException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Користувач відкриває проєкт<br>2. Натискає "Створити завдання"<br>3. Вводить назву, опис, дедлайн, виконавців<br>4. Підтверджує дію<br>5. Система перевіряє коректність даних<br>6. Завдання створено</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>CreateTask</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Створення завдання</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач має права на створення завдань у проєкті</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Створено нове завдання</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Некоректно введені дані — <code>InvalidDataException</code><br>- Доступ заборонено — <code>AccessDeniedException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває проєкт<br>2. Натискає "Створити завдання"<br>3. Вводить назву, опис, дедлайн, виконавців<br>4. Підтверджує дію<br>5. Перевіряється коректність введених даних<br>6. Якщо все коректно, створюється завдання</td></tr>
 </tbody></table>
 </div>
 <h3 id="Редагування-завдання"><a class="header" href="#Редагування-завдання">Редагування завдання</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">EditTask</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Редагування завдання</td></tr>
-<tr><td>Учасники:</td><td>Користувач, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач має дозвіл на редагування завдання</td></tr>
-<tr><td>Результат:</td><td>Оновлене завдання</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Доступ заборонено — AccessDeniedException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Користувач відкриває завдання<br>2. Вносить зміни (назва, опис, дедлайн, виконавці)<br>3. Натискає "Зберегти"<br>4. Система перевіряє коректність введених даних<br>5. Якщо дані коректні, система оновлює завдання</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>EditTask</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Редагування завдання</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач має дозвіл на редагування завдання</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Оновлене завдання</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Доступ заборонено — <code>AccessDeniedException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває завдання<br>2. Вносить зміни (назва, опис, дедлайн, виконавці)<br>3. Натискає "Зберегти"<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, зберігаються зміни</td></tr>
 </tbody></table>
 </div>
 <h3 id="Видалення-завдання"><a class="header" href="#Видалення-завдання">Видалення завдання</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>ID</th><th><div style="width:500px">DeleteTask</div></th></tr></thead><tbody>
-<tr><td>Назва:</td><td>Видалення завдання</td></tr>
-<tr><td>Учасники:</td><td>Користувач, система</td></tr>
-<tr><td>Передумови:</td><td>Користувач має дозвіл на видалення завдання</td></tr>
-<tr><td>Результат:</td><td>Завдання видалено</td></tr>
-<tr><td>Виключні ситуації:</td><td>- Доступ заборонено — AccessDeniedException</td></tr>
-<tr><td>Основний сценарій:</td><td>1. Користувач відкриває завдання<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Система видаляє завдання</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>DeleteTask</code></div></th></tr></thead><tbody>
+<tr><td style="text-align: left">Назва:</td><td style="text-align: left">Видалення завдання</td></tr>
+<tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
+<tr><td style="text-align: left">Передумови:</td><td style="text-align: left">Користувач має дозвіл на видалення завдання</td></tr>
+<tr><td style="text-align: left">Результат:</td><td style="text-align: left">Завдання видалено</td></tr>
+<tr><td style="text-align: left">Виключні ситуації:</td><td style="text-align: left">- Доступ заборонено — <code>AccessDeniedException</code></td></tr>
+<tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває завдання<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Видаляється завдання</td></tr>
 </tbody></table>
 </div>
 <h2 id="Короткий-огляд-продукту"><a class="header" href="#Короткий-огляд-продукту">Короткий огляд продукту</a></h2>
