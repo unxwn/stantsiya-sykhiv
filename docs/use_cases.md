@@ -83,5 +83,16 @@
 
 ![DeleteProject Diagram](www.plantuml.com/plantuml/png/VP11IiDW48NtESLGrwvADur81Js8fZyQqAGql-0Y2qt1RgI5KY888juWb4H2glKARsxa_5FyLs8M8VFcotlC6sNsV6flRww372_OyJrQVk22PzYWudaUa3pAXFev9AouH8tEeGgj2TyoxD28M7ZiLLQ5SqEdK0yhjAXHOOlMRNeUVNEE8ctGY56D3vx93oALl0X9gIIrXgRnvPMb0nCD-eE-oaSNnwI-7RQyu3c-k2I9RDq94lie5iz3ZnxIIHIPB3irIMp6PtUHcTWuJNHlal4-XGATSxplkq23JrIvF__t2bxoMcAUX5d-KO6-_YqrdOJ1I6Ab_Hy0)
 
+| ID:                | <div style="width:500px">` AddMembers `</div> |
+| :------------------| :--------------|
+| Назва:             | Додавання учасників у проєкт |
+| Учасники:          | Адміністратор, система |
+| Передумови:        | Користувач має права на додавання |
+| Результат:         | Додані нові учасники |
+| Виключні ситуації: | - Доступ заборонено — ` AccessDeniedException `<br>- Користувач уже в команді — ` UserAlreadyInTeamException ` |
+| Основний сценарій: | 1. Адміністратор відкриває налаштування команди<br>2. Додає нових учасників, вводячи їхню пошту або ID<br>3. Перевіряється коректність введених даних<br>4. Якщо все коректно, додаються учасники |
+
+![AddMembers Diagram](www.plantuml.com/plantuml/png/ZLB1Ql9W4BpdAHR-wz-JU36bADY3z_O1RFne1OsIfD123b6nxK6q5D5ZwHlO4E53JVeAks_K-H8CjQSAmcPsTcTcaxeVjBtWlj-pGdxbX0-oubHMCfAnHBoHCMSIXHRXbpFjlAmHlu6Oy0uapJ68I-AKDxn7-OBPYG61fB8Wtd761_E82LrkM09DZfCP-5gc91Dv1ZO2f7a7ZVW_eHKRhYpGqoHhcMBldFYBiqACiFoJCserRI8h5mZvWxM9mLkZ7HvLttah4R0O8IDiN69-1bvXqxGWEovlCClL0IRufxb5OxeeYoZk853aTM_l0lgdd6gbMidXyviBNCcauBtCuHmh2S6qCOo8Jr1Orqhg6JKSH_b-KxbTrRbySDGmw0xS7_rhNtcDdgVQdSUMUwNQ_LEISZk5bT_tdPS9Ju_BsYvEzOStFnZQLXqA-52-0G00)
+
 
 
