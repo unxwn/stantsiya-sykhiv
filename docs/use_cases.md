@@ -138,4 +138,15 @@
 
 ![EditTask Diagram](www.plantuml.com/plantuml/png/VLB1Jl906BptAJRybzz4JuGB68E9FeYMZP9e8L0J3pr0YN8na1XI4XDZV8DQQ4IWy0hplP6pMoWtsxJPtPbllfclhNVzgux_S7_d17Z3HdfOI5z26I11BCF0KRmifsQNLOLNYJ37qb0jQQAmvMQ3b8VXWOQCUdtgXVAYy8qrwp8ir7--O-vPUwnOjZKjkPeZvRCYzeEC-uJwI-A6dSYpH4U5zZlRXgQC16EWX2c-aD95Yfb1IgHQSe3FF16HDU9Wh_2nOoSIIK_6CZ4koHihqvEG3OECS3yFaF1EhKc6a2VZDywNkIslvMlLQTxS-kgVTYlbIjaUdrwVSHOsoaf6CZIIQZUM0MAJIwRLWdgYpbrNTxiNsclgnkMZgzj-i-LPN7kDl8lQfTYdbWWpIesA38TfrnpB_VFZjjerfqvn_WM_)
 
+| ID:                | <div style="width:500px">` DeleteTask `</div> |
+| :------------------| :--------------|
+| Назва:             | Видалення завдання |
+| Учасники:          | Користувач, система |
+| Передумови:        | Користувач має дозвіл на видалення завдання |
+| Результат:         | Завдання видалено |
+| Виключні ситуації: | - Доступ заборонено — ` AccessDeniedException ` |
+| Основний сценарій: | 1. Користувач відкриває завдання<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Видаляється завдання |
+
+![DeleteTask Diagram](www.plantuml.com/plantuml/png/VP71IiDG54Jt_OfBNRigtJGY5VH3D7reG9FIFC555jg2tKW3fKGGHFo3HqWrfCPlcFj7tdUBMObPXPd337VUEBNdCtjxSztBy89llaVD3ppd1KeuNcOzaa-PG7z7X3KNgD1uLA4DuHCEfOWEBLhEE_HLxBbFHADW7slKokrGUwVVeMy-LQGIMqckyC4BdrnnmQk0b8eJQsWMNLvPEZ3XS30Sg7nqSKoQss37ArwYvOAaijOp73zAnFEeGm_f90nDcfwQE3AJixlGJ6sKnEgRUB9laK8LChpl1y4MNt1Pjy7l6PppHdgUXCd_s47vVvTDfa5lBBto13y0)
+
 
