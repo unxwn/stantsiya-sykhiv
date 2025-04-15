@@ -127,4 +127,15 @@
 
 ![CreateTask Diagram](www.plantuml.com/plantuml/png/VPBFIiD04CRlUOgXNkkfzDA8LAW77oEcYmPgMjee7d9eMhGNQK5A1K6aRn2MrZ-fQLzXvetyTeDH4ImqPEVxpSptiMaE8gyVNLvqd9WVUIj3VfD4HZ9cpQbCOeVmiunhNnl4zxBW5MS6jT2SU8V3bjSeZahi2TB8JEFCGXLUugoB7KOXVkKKXHMUEUSogtolC1m4S797K5EmMiPLGdc7Sb8bo6lyDz3UESTPmqy67JJOMxZKvS1duzckNyiGNIyoXYMK5Z9roI7BnRmiqcFm1wTnsMoQKDEWXpAJkN45RaPcdvKGd7F8IM5OcqNMO8w9DsGpsjV2KTYD5FM3i_E8zfHVhzLhjdnmUeZiDiP6fZ8n8qaIz9aBIKqcUMYKw3wTX5TU9sYtlCWxllPLBmgwuG_voFVLOD1IOQ3QltKLjWiJz1Mol1miBWF-kIBNiVo_tqgtvpfDBC17zGa0)
 
+| ID:                | <div style="width:500px">` EditTask `</div> |
+| :------------------| :--------------|
+| Назва:             | Редагування завдання |
+| Учасники:          | Користувач, система |
+| Передумови:        | Користувач має дозвіл на редагування завдання |
+| Результат:         | Оновлене завдання |
+| Виключні ситуації: | - Доступ заборонено — ` AccessDeniedException ` |
+| Основний сценарій: | 1. Користувач відкриває завдання<br>2. Вносить зміни (назва, опис, дедлайн, виконавці)<br>3. Натискає "Зберегти"<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, зберігаються зміни |
+
+![EditTask Diagram](www.plantuml.com/plantuml/png/VLB1Jl906BptAJRybzz4JuGB68E9FeYMZP9e8L0J3pr0YN8na1XI4XDZV8DQQ4IWy0hplP6pMoWtsxJPtPbllfclhNVzgux_S7_d17Z3HdfOI5z26I11BCF0KRmifsQNLOLNYJ37qb0jQQAmvMQ3b8VXWOQCUdtgXVAYy8qrwp8ir7--O-vPUwnOjZKjkPeZvRCYzeEC-uJwI-A6dSYpH4U5zZlRXgQC16EWX2c-aD95Yfb1IgHQSe3FF16HDU9Wh_2nOoSIIK_6CZ4koHihqvEG3OECS3yFaF1EhKc6a2VZDywNkIslvMlLQTxS-kgVTYlbIjaUdrwVSHOsoaf6CZIIQZUM0MAJIwRLWdgYpbrNTxiNsclgnkMZgzj-i-LPN7kDl8lQfTYdbWWpIesA38TfrnpB_VFZjjerfqvn_WM_)
+
 
