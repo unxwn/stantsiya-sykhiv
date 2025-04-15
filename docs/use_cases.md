@@ -105,5 +105,16 @@
 
 ![EditMemberPermissions](www.plantuml.com/plantuml/png/XLB1Ji904BttAoRnx8bm0MCmqG_Hib4IBOJMn4CFfOrw8SKO0aVZ7zHIObDf-OMPF_BjBfQZ93IxCs_Uc_VQWHzSJuF7Xtidv3SkU2ShhcKbCuabuanYRYGA7SBF8Flcs2D-1x3W2g2ISm2N93FUSubdmnL98g-SuLAZNm6RjvFhWqYA6Tvh5Kr0O6kCR89Yegy_iY2kG5SRdIsMgN7RS6FAMlemW7ajrtUCHiYVjiDRtd4M_Wb_W08qdCDV90jPOdOEd5KnhKhYrlwSm9kZME0F6_9CE6RsQDsGDmuKJKUtTm6TABVRwNPC_Upc70bfvp2HOZLmwdnAisqcBv1OzrheALsuhlBzI-MDrF3goLMJO3JsJ5zvGwj2T0pmIpj1Y1jmfKSNtpPPBjiW_dsbuqdV6K03Ny0l)
 
+| ID:                | <div style="width:500px">` RemoveMembers `</div> |
+| :------------------| :--------------|
+| Назва:             | Видалення учасників із проєкту |
+| Учасники:          | Адміністратор, система |
+| Передумови:        | Користувач має права на видалення |
+| Результат:         | Учасника видалено з проєкту |
+| Виключні ситуації: | - Доступ заборонено — ` AccessDeniedException ` |
+| Основний сценарій: | 1. Адміністратор відкриває список учасників<br>2. Обирає учасників для видалення<br>3. Підтверджує дію<br>4. Видаляються учасники |
+
+![RemoveMembers Diagram](www.plantuml.com/plantuml/png/XP6_IiDG5CRtFCK1PwVIfH6fe0-YwKK3cfGcWaE6D0LTf14fTLDyWrWQ2MbJN-4xR-IN2ysWGpE4UtD_v_kJEupYoqbyVtVh97Z16bjTej6bJZNJ58Lcs6cQECB7agvT3WIl1DUe2LLO4Lo8Jl63YkyTQj6PFg7Wfk5vJNRLJRxZYrXgP_vZGjMDvaBHYii26vGyRJJl13vQQyr8b9gI-QRAWdECFNU9M4w2C3OoyQzlOZaoNh_Nxzdl9rUd3D-wqMPETxPjerSiF6EKHwgy3JhqMCuypqJHkGbyCxfuyCmuziF0dfjWP5qSkqlmsRPdhX9R54dte_OzDATVfizayZ_5KRbxaOEN48vTPqXhtjal)
+
 
 
