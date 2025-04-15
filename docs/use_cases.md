@@ -50,4 +50,15 @@
 
 ![DeleteAccount Diagram](www.plantuml.com/plantuml/png/VP51IiDW48NtESLGrwvADwr8GLnxXfZ-Q24c8KPmaKNQe7KXBOX4SA5uWrXI2Qtj6TxSoETV4dSc15w6xysRV_xXTUB6oSsLxwHunKupr3hHgUPOejHPwWWVomoix0lUiTACtnrsg50JVXJD1LkKsD3qqDXPsUgYzRtXatH6ubawU4ADoZhO0RLGhlcMcjCqxVobQO6AnDAcLlZId7wM2ftleI1CZCJZYyj43epNw_QwjdnqVYmsPOsDpdN6jeNen0wSC-UU7LxwBNee9sxW6TytexF8n6uo3eFJMyz4ly9I9XZPBCV-fVZOhmehVADCctdRS-c2SrAqPneqnd_s74O3PyWWNiWF)
 
+| ID:                |<div style="width:500px">` CreateProject `</div>   |
+| :------------------| :--------------|      
+| Назва:             | Створення проєкту |
+| Учасники:          | Користувач, система |
+| Передумови:        | Користувач авторизований |
+| Результат:         | Створено новий проєкт |
+| Виключні ситуації: | - Некоректно введені дані — ` InvalidDataException ` |
+| Основний сценарій: | 1. Користувач натискає "Створити проєкт"<br>2. Заповнює необхідні поля<br>3. Підтверджує дію<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, створюється проєкт |
+
+![CreateProject Diagram](www.plantuml.com/plantuml/png/VL7FIW9n4BxlKmnsxYHUDC937NgCJPSIR1Nx5HtsO8fv2OKGXI32DzWM3T7KL_ZcZVgShHzqIL36-VvyC_Ehthgmu-vkca62L-oqYvK-Qa_xo93gC0c47-DKh2mBtWZq3ZIiMKsaW3d_PpzY8e8zonsMM6klu7KpfDYpdM6h8-gm9ME73nte50isfsBuHiTUytw0p7sfNP8-jKybMrCTvIJxIJ3FvwRZ5zB4oqssH4P-LySwuMRFv8q5QvlNHZn4iqb86CGeBFZTqd4WBDEypEFYbekaqxYwTd8KrKh5Kj7Q9vUdWXUiQBlXSaFRXXTQsIbJVMB2hEofnt8HtuVDHlqiTE7vGorgkqOhDZYAwnRokuA_BMtz-7ykN0cC--_xjTgLe4fhFlGt)
+
 
