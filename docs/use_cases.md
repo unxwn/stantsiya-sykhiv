@@ -39,3 +39,15 @@
 
 ![EditAccount Diagram](www.plantuml.com/plantuml/png/VLBDJi9W4BptARxWsHFX0iPmq8EFKQ5H4Ym4g_7G0pyY7emaXa1YeiOtg1LZKsXzXTatShxlWv9uiCtNR7TdPsQthLy6RY-ukcWx8PwHIn-936Ge8yI8P18wYfV1r4nOLNZ3b_HvniYnH4BmWvAHGeO8ApRTRzkPoMIg6AIy8oOpNIg8dWZ8PR2Xm3VMCcSgAG0lR1fgGwPzfafOuCEgurDNIXPg7Y7UhNSMruZ2FtOHorpwCfMPLYEEnbBaffIoAMDvO8t4Y9bSyj2CZ1N3o8PMpky4dkgrpiu3jUSrAkLAsQGFJW_rJ0bIhEHH9ffIRSORqVyT5HRL0hglJlnhjzrg7hc1UtpJyBf1g-ERikStZSXsX5UzACI6TcTVBqjkpGXhIyyaVlYQAqIxZTSSm_Flz-rqQqwTilmHVW40)
 
+| ID:                | ` DeleteAccount ` |
+| :------------------| :--------------|
+| Назва:             | Видалення акаунту |
+| Учасники:          | Користувач, система |
+| Передумови:        | Користувач авторизований |
+| Результат:         | Акаунт видалено |
+| Виключні ситуації: | - Користувач не підтвердив видалення — ` CancelledOperationException ` |
+| Основний сценарій: | 1. Користувач переходить у налаштування<br>2. Обирає "Видалити акаунт"<br>3. Підтверджує дію<br>4. Видаляється акаунт |
+
+![DeleteAccount Diagram](www.plantuml.com/plantuml/png/VP51IiDW48NtESLGrwvADwr8GLnxXfZ-Q24c8KPmaKNQe7KXBOX4SA5uWrXI2Qtj6TxSoETV4dSc15w6xysRV_xXTUB6oSsLxwHunKupr3hHgUPOejHPwWWVomoix0lUiTACtnrsg50JVXJD1LkKsD3qqDXPsUgYzRtXatH6ubawU4ADoZhO0RLGhlcMcjCqxVobQO6AnDAcLlZId7wM2ftleI1CZCJZYyj43epNw_QwjdnqVYmsPOsDpdN6jeNen0wSC-UU7LxwBNee9sxW6TytexF8n6uo3eFJMyz4ly9I9XZPBCV-fVZOhmehVADCctdRS-c2SrAqPneqnd_s74O3PyWWNiWF)
+
+
