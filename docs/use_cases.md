@@ -116,5 +116,15 @@
 
 ![RemoveMembers Diagram](www.plantuml.com/plantuml/png/XP6_IiDG5CRtFCK1PwVIfH6fe0-YwKK3cfGcWaE6D0LTf14fTLDyWrWQ2MbJN-4xR-IN2ysWGpE4UtD_v_kJEupYoqbyVtVh97Z16bjTej6bJZNJ58Lcs6cQECB7agvT3WIl1DUe2LLO4Lo8Jl63YkyTQj6PFg7Wfk5vJNRLJRxZYrXgP_vZGjMDvaBHYii26vGyRJJl13vQQyr8b9gI-QRAWdECFNU9M4w2C3OoyQzlOZaoNh_Nxzdl9rUd3D-wqMPETxPjerSiF6EKHwgy3JhqMCuypqJHkGbyCxfuyCmuziF0dfjWP5qSkqlmsRPdhX9R54dte_OzDATVfizayZ_5KRbxaOEN48vTPqXhtjal)
 
+| ID:                | <div style="width:500px">` CreateTask `</div> |
+| :------------------| :--------------|
+| Назва:             | Створення завдання |
+| Учасники:          | Користувач, система |
+| Передумови:        | Користувач має права на створення завдань у проєкті |
+| Результат:         | Створено нове завдання |
+| Виключні ситуації: | - Некоректно введені дані — ` InvalidDataException `<br>- Доступ заборонено — ` AccessDeniedException ` |
+| Основний сценарій: | 1. Користувач відкриває проєкт<br>2. Натискає "Створити завдання"<br>3. Вводить назву, опис, дедлайн, виконавців<br>4. Підтверджує дію<br>5. Перевіряється коректність введених даних<br>6. Якщо все коректно, створюється завдання |
+
+![CreateTask Diagram](www.plantuml.com/plantuml/png/VPBFIiD04CRlUOgXNkkfzDA8LAW77oEcYmPgMjee7d9eMhGNQK5A1K6aRn2MrZ-fQLzXvetyTeDH4ImqPEVxpSptiMaE8gyVNLvqd9WVUIj3VfD4HZ9cpQbCOeVmiunhNnl4zxBW5MS6jT2SU8V3bjSeZahi2TB8JEFCGXLUugoB7KOXVkKKXHMUEUSogtolC1m4S797K5EmMiPLGdc7Sb8bo6lyDz3UESTPmqy67JJOMxZKvS1duzckNyiGNIyoXYMK5Z9roI7BnRmiqcFm1wTnsMoQKDEWXpAJkN45RaPcdvKGd7F8IM5OcqNMO8w9DsGpsjV2KTYD5FM3i_E8zfHVhzLhjdnmUeZiDiP6fZ8n8qaIz9aBIKqcUMYKw3wTX5TU9sYtlCWxllPLBmgwuG_voFVLOD1IOQ3QltKLjWiJz1Mol1miBWF-kIBNiVo_tqgtvpfDBC17zGa0)
 
 
