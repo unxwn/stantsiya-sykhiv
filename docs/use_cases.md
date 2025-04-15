@@ -72,5 +72,16 @@
 
 ![EditProject Diagram](www.plantuml.com/plantuml/png/VL5DIiDG4Dxd58-wTbMwQKKgw44qVMX0az94S955awBTI0jIKX14l45C3OROr2jySoFdJPAA6nC8apVVV3zlXdvmFWbkRwwj4C_OqHG5HHJJ31bIceUMuaSm0odx2a-Ku0EbWGfefV3DFplaV1Z_mb0nNuI2sHuLFh7bkGh57l32ix6HGoai7QpnZfofScnCfrD3vHFYhNR6pItIi2LvRGOoIcXAIrePDSOj5Kg98wPGSJkgZMJyvXmWDsReNd6PrcKjvtg1LXFdyYfG1zhkTNjTEJwwE3QP2gRzeWND3QLguitO_mChhFjxwA4wiMtj-wVQTVJexCxMuy3nNEbhToGgJOOsDYNOCD6YJV3dpWJxxugyyS0QCZNlyWS0)
 
+| ID:                | <div style="width:500px">` DeleteProject `</div> |
+| :------------------| :--------------|      
+| Назва:             | Видалення проєкту |
+| Учасники:          | Користувач, система |
+| Передумови:        | Користувач має права на видалення |
+| Результат:         | Проєкт видалено |
+| Виключні ситуації: | - Доступ заборонено — ` AccessDeniedException ` |
+| Основний сценарій: | 1. Користувач відкриває проєкт<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Видаляється проєкт |
+
+![DeleteProject Diagram](www.plantuml.com/plantuml/png/VP11IiDW48NtESLGrwvADur81Js8fZyQqAGql-0Y2qt1RgI5KY888juWb4H2glKARsxa_5FyLs8M8VFcotlC6sNsV6flRww372_OyJrQVk22PzYWudaUa3pAXFev9AouH8tEeGgj2TyoxD28M7ZiLLQ5SqEdK0yhjAXHOOlMRNeUVNEE8ctGY56D3vx93oALl0X9gIIrXgRnvPMb0nCD-eE-oaSNnwI-7RQyu3c-k2I9RDq94lie5iz3ZnxIIHIPB3irIMp6PtUHcTWuJNHlal4-XGATSxplkq23JrIvF__t2bxoMcAUX5d-KO6-_YqrdOJ1I6Ab_Hy0)
+
 
 
