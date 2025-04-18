@@ -4,15 +4,15 @@
 
 ### Загальна схема
 
-![general-use-case-diagram.png](../src/images/general-use-case-diagram.png)
+![general-use-case-diagram.png](images/admin-use-case-diagram.png)
 
 ### Користувач
 
-![user-use-case-diagram.png](../src/images/user-use-case-diagram.png)
+![user-use-case-diagram.png](./src/images/user-use-case-diagram.png)
 
 ### Адміністратор
 
-![admin-use-case-diagram.png](../src/images/admin-use-case-diagram.png)
+![admin-use-case-diagram.png](./src/images/admin-use-case-diagram.png)
 
 
 ## Сценарії використання
@@ -148,5 +148,3 @@
 | Основний сценарій: | 1. Користувач відкриває завдання<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Видаляється завдання |
 
 ![DeleteTask Diagram](https://www.plantuml.com/plantuml/png/VP71IiDG54Jt_OfBNRigtJGY5VH3D7reG9FIFC555jg2tKW3fKGGHFo3HqWrfCPlcFj7tdUBMObPXPd337VUEBNdCtjxSztBy89llaVD3ppd1KeuNcOzaa-PG7z7X3KNgD1uLA4DuHCEfOWEBLhEE_HLxBbFHADW7slKokrGUwVVeMy-LQGIMqckyC4BdrnnmQk0b8eJQsWMNLvPEZ3XS30Sg7nqSKoQss37ArwYvOAaijOp73zAnFEeGm_f90nDcfwQE3AJixlGJ6sKnEgRUB9laK8LChpl1y4MNt1Pjy7l6PppHdgUXCd_s47vVvTDfa5lBBto13y0)
-
-
