@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Розроблення функціональних вимог до системи - Станція Сихів</title>
+        <title>Запити зацікавлених осіб - Станція Сихів</title>
 
 
         <!-- Custom HTML head -->
@@ -12,33 +12,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "";
+            const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
+        <script src="../toc.js"></script>
     </head>
     <body>
     <div id="body-container">
@@ -91,7 +91,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -126,7 +126,7 @@
                     <h1 class="menu-title">Станція Сихів</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -155,15 +155,41 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="Розроблення-функціональних-вимог-до-системи"><a class="header" href="#Розроблення-функціональних-вимог-до-системи">Розроблення функціональних вимог до системи</a></h1>
-<h2 id="Модель-прецедентів"><a class="header" href="#Модель-прецедентів">Модель прецедентів</a></h2>
-<h3 id="Загальна-схема"><a class="header" href="#Загальна-схема">Загальна схема</a></h3>
-<p><img src="../src/images/general-use-case-diagram.png" alt="general-use-case-diagram.png" /></p>
-<h3 id="Користувач"><a class="header" href="#Користувач">Користувач</a></h3>
-<p><img src="../src/images/user-use-case-diagram.png" alt="user-use-case-diagram.png" /></p>
-<h3 id="Адміністратор"><a class="header" href="#Адміністратор">Адміністратор</a></h3>
-<p><img src="../src/images/admin-use-case-diagram.png" alt="admin-use-case-diagram.png" /></p>
-<h2 id="Сценарії-використання"><a class="header" href="#Сценарії-використання">Сценарії використання</a></h2>
+                        <h1 id="Система-управління-проєктами"><a class="header" href="#Система-управління-проєктами">Система управління проєктами</a></h1>
+<h2 id="Запити-зацікавлених-осіб"><a class="header" href="#Запити-зацікавлених-осіб">Запити зацікавлених осіб</a></h2>
+<h2 id="Вступ"><a class="header" href="#Вступ">Вступ</a></h2>
+<p>Система управління проєктами (СУП) – це програмне забезпечення, призначене для планування, організації, контролю та управління ресурсами проєкту. Даний документ описує вимоги до системи, включаючи її функціональні можливості, характеристики продуктивності, надійність та підтримку. Він містить загальний огляд, визначення основних термінів, сценарії використання та характеристики користувачів.</p>
+<h3 id="Мета"><a class="header" href="#Мета">Мета</a></h3>
+<p>Метою створення цієї системи є впровадження інтегрованої платформи для управління проєктами, що дозволяє автоматизувати процеси планування, контролю виконання завдань, управління ресурсами та комунікацію між учасниками проєкту. Система повинна забезпечувати прозорість робочих процесів, підвищувати ефективність командної роботи та надавати аналітичні дані для прийняття рішень.</p>
+<h3 id="Контекст"><a class="header" href="#Контекст">Контекст</a></h3>
+<p>Цей документ стосується інформаційної системи, яка буде використовуватися компаніями для управління проєктами будь-якої складності. Вона буде інтегруватися з існуючими системами контролю версій, комунікаційними платформами та інструментами для спільної роботи. Дана система може використовуватися в різних галузях, включаючи IT, будівництво, маркетинг та інші сфери, де необхідно координувати виконання завдань та контролювати ресурси.</p>
+<h3 id="Основні-визначення-та-скорочення"><a class="header" href="#Основні-визначення-та-скорочення">Основні визначення та скорочення</a></h3>
+<ul>
+<li><strong>Система управління проєктами (СУП)</strong> – програмне забезпечення для організації, планування та моніторингу проєктної діяльності.</li>
+<li><strong>Користувач</strong> – особа, що взаємодіє з системою (менеджер проєкту, виконавець, замовник).</li>
+<li><strong>Завдання (Task)</strong> – одиниця роботи в межах проєкту.</li>
+<li><strong>Дошка завдань (Task Board)</strong> – візуальне представлення списку завдань у різних станах виконання.</li>
+<li><strong>Ресурси</strong> – матеріальні та нематеріальні активи, необхідні для реалізації проєкту.</li>
+<li><strong>Sprint</strong> – короткий цикл виконання завдань у гнучких методологіях (Agile, Scrum).</li>
+<li><strong>Backlog</strong> – список невиконаних завдань проєкту.</li>
+</ul>
+<h3 id="Посилання"><a class="header" href="#Посилання">Посилання</a></h3>
+<ul>
+<li><a href="https://agilemanifesto.org/">Agile Manifesto</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge">PMBOK Guide</a></li>
+<li><a href="https://www.scrum.org/resources/scrum-guide">Опис SCRUM-методології</a></li>
+</ul>
+<h2 id="Короткий-зміст"><a class="header" href="#Короткий-зміст">Короткий зміст</a></h2>
+<p>Документ містить:</p>
+<ol>
+<li>Опис характеристик бізнес-процесів у контексті використання системи.</li>
+<li>Визначення основних функціональних можливостей системи.</li>
+<li>Огляд вимог до продуктивності, надійності та підтримки.</li>
+<li>Визначення категорій користувачів та їхніх очікувань від системи.</li>
+</ol>
+<h2 id="Характеристика-ділових-процесів"><a class="header" href="#Характеристика-ділових-процесів">Характеристика ділових процесів</a></h2>
+<h3 id="Бізнес-сценарій-Управління-завданнями"><a class="header" href="#Бізнес-сценарій-Управління-завданнями">Бізнес-сценарій: Управління завданнями</a></h3>
+<h3 id="Утворення-акаунту"><a class="header" href="#Утворення-акаунту">Утворення акаунту</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><code>CreateAccount</code></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Створення акаунту</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -173,7 +199,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває форму реєстрації<br>2. Вводить необхідні дані<br>3. Натискає "Зареєструватися"<br>4. Перевіряється коректність введених даних<br>5. Якщо всі перевірки пройдені, створюється акаунт</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/ZLBDIW9H5Dxx51TRjn8t6c4Bjn953s1wCs6QaPah6Sp2qSnD9CGmGX3X6zYWP9EZht3E6tNk6KOdA4ZG-tFFztC-JyLHTLjrRuoS2o-mmJwiqCC13Y64EOxTdA0FrvHvMnBmZ04i8DAbNEGBl6Va6eU2bYNwJD6djmSCSBf7Kls6i2jwVHGGmvAExpXYmXW3GSjSRtQ8L-8OQ4iGiH8jCM6s495M7gPqcH7KhbC0Jl892_-uC4iQ8yarpDsK_ut0H00X1WIVeA-TQR1Msl1JHA2OdZqsJG8XNIxe6nFZAB7CsqJEj9GKThjrhSI1R1GBnG9V7rqUw_vNHFk5JpZcTj7ZA8PfKALTwQ6eTGtZJ5v9MveDMUqrP4UrBJDJSE58-yImPRrvL-sr7UNyLbIprBcoBRDrMdUSMyjk_YoIPfCDyo7DP4ODXxfvykaBpZiauvz2_rdaFe1eV_L1tMzrjDcm_vwaVUGuoeo27XmlbTNH_bVFKLQddAjG7pJ2tm00" alt="CreateAccount Diagram" /></p>
+<h3 id="Редагування-інформації-акаунту"><a class="header" href="#Редагування-інформації-акаунту">Редагування інформації акаунту</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><code>EditAccount</code></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Редагування інформації акаунту</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -183,7 +209,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач переходить у налаштування акаунту<br>2. Вносить зміни<br>3. Натискає "Зберегти"<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, оновлюється інформація про акаунт</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/VLBDJi9W4BptARxWsHFX0iPmq8EFKQ5H4Ym4g_7G0pyY7emaXa1YeiOtg1LZKsXzXTatShxlWv9uiCtNR7TdPsQthLy6RY-ukcWx8PwHIn-936Ge8yI8P18wYfV1r4nOLNZ3b_HvniYnH4BmWvAHGeO8ApRTRzkPoMIg6AIy8oOpNIg8dWZ8PR2Xm3VMCcSgAG0lR1fgGwPzfafOuCEgurDNIXPg7Y7UhNSMruZ2FtOHorpwCfMPLYEEnbBaffIoAMDvO8t4Y9bSyj2CZ1N3o8PMpky4dkgrpiu3jUSrAkLAsQGFJW_rJ0bIhEHH9ffIRSORqVyT5HRL0hglJlnhjzrg7hc1UtpJyBf1g-ERikStZSXsX5UzACI6TcTVBqjkpGXhIyyaVlYQAqIxZTSSm_Flz-rqQqwTilmHVW40" alt="EditAccount Diagram" /></p>
+<h3 id="Видалення-акаунту"><a class="header" href="#Видалення-акаунту">Видалення акаунту</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><code>DeleteAccount</code></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Видалення акаунту</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -193,7 +219,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач переходить у налаштування<br>2. Обирає "Видалити акаунт"<br>3. Підтверджує дію<br>4. Видаляється акаунт</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/VP51IiDW48NtESLGrwvADwr8GLnxXfZ-Q24c8KPmaKNQe7KXBOX4SA5uWrXI2Qtj6TxSoETV4dSc15w6xysRV_xXTUB6oSsLxwHunKupr3hHgUPOejHPwWWVomoix0lUiTACtnrsg50JVXJD1LkKsD3qqDXPsUgYzRtXatH6ubawU4ADoZhO0RLGhlcMcjCqxVobQO6AnDAcLlZId7wM2ftleI1CZCJZYyj43epNw_QwjdnqVYmsPOsDpdN6jeNen0wSC-UU7LxwBNee9sxW6TytexF8n6uo3eFJMyz4ly9I9XZPBCV-fVZOhmehVADCctdRS-c2SrAqPneqnd_s74O3PyWWNiWF" alt="DeleteAccount Diagram" /></p>
+<h3 id="Створення-проєкту"><a class="header" href="#Створення-проєкту">Створення проєкту</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>CreateProject</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Створення проєкту</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -203,7 +229,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач натискає "Створити проєкт"<br>2. Заповнює необхідні поля<br>3. Підтверджує дію<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, створюється проєкт</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/VL7FIW9n4BxlKmnsxYHUDC937NgCJPSIR1Nx5HtsO8fv2OKGXI32DzWM3T7KL_ZcZVgShHzqIL36-VvyC_Ehthgmu-vkca62L-oqYvK-Qa_xo93gC0c47-DKh2mBtWZq3ZIiMKsaW3d_PpzY8e8zonsMM6klu7KpfDYpdM6h8-gm9ME73nte50isfsBuHiTUytw0p7sfNP8-jKybMrCTvIJxIJ3FvwRZ5zB4oqssH4P-LySwuMRFv8q5QvlNHZn4iqb86CGeBFZTqd4WBDEypEFYbekaqxYwTd8KrKh5Kj7Q9vUdWXUiQBlXSaFRXXTQsIbJVMB2hEofnt8HtuVDHlqiTE7vGorgkqOhDZYAwnRokuA_BMtz-7ykN0cC--_xjTgLe4fhFlGt" alt="CreateProject Diagram" /></p>
+<h3 id="Редагування-проєкту"><a class="header" href="#Редагування-проєкту">Редагування проєкту</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>EditProject</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Редагування проєкту</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -213,7 +239,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває проєкт<br>2. Вносить зміни<br>3. Натискає "Зберегти"<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, зберігаються зміни</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/VL5DIiDG4Dxd58-wTbMwQKKgw44qVMX0az94S955awBTI0jIKX14l45C3OROr2jySoFdJPAA6nC8apVVV3zlXdvmFWbkRwwj4C_OqHG5HHJJ31bIceUMuaSm0odx2a-Ku0EbWGfefV3DFplaV1Z_mb0nNuI2sHuLFh7bkGh57l32ix6HGoai7QpnZfofScnCfrD3vHFYhNR6pItIi2LvRGOoIcXAIrePDSOj5Kg98wPGSJkgZMJyvXmWDsReNd6PrcKjvtg1LXFdyYfG1zhkTNjTEJwwE3QP2gRzeWND3QLguitO_mChhFjxwA4wiMtj-wVQTVJexCxMuy3nNEbhToGgJOOsDYNOCD6YJV3dpWJxxugyyS0QCZNlyWS0" alt="EditProject Diagram" /></p>
+<h3 id="Видалення-проєкту"><a class="header" href="#Видалення-проєкту">Видалення проєкту</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>DeleteProject</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Видалення проєкту</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -223,7 +249,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває проєкт<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Видаляється проєкт</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/VP11IiDW48NtESLGrwvADur81Js8fZyQqAGql-0Y2qt1RgI5KY888juWb4H2glKARsxa_5FyLs8M8VFcotlC6sNsV6flRww372_OyJrQVk22PzYWudaUa3pAXFev9AouH8tEeGgj2TyoxD28M7ZiLLQ5SqEdK0yhjAXHOOlMRNeUVNEE8ctGY56D3vx93oALl0X9gIIrXgRnvPMb0nCD-eE-oaSNnwI-7RQyu3c-k2I9RDq94lie5iz3ZnxIIHIPB3irIMp6PtUHcTWuJNHlal4-XGATSxplkq23JrIvF__t2bxoMcAUX5d-KO6-_YqrdOJ1I6Ab_Hy0" alt="DeleteProject Diagram" /></p>
+<h3 id="Додавання-учасників"><a class="header" href="#Додавання-учасників">Додавання учасників</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>AddMembers</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Додавання учасників у проєкт</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Адміністратор, система</td></tr>
@@ -233,7 +259,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Адміністратор відкриває налаштування команди<br>2. Додає нових учасників, вводячи їхню пошту або ID<br>3. Перевіряється коректність введених даних<br>4. Якщо все коректно, додаються учасники</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/ZLB1Ql9W4BpdAHR-wz-JU36bADY3z_O1RFne1OsIfD123b6nxK6q5D5ZwHlO4E53JVeAks_K-H8CjQSAmcPsTcTcaxeVjBtWlj-pGdxbX0-oubHMCfAnHBoHCMSIXHRXbpFjlAmHlu6Oy0uapJ68I-AKDxn7-OBPYG61fB8Wtd761_E82LrkM09DZfCP-5gc91Dv1ZO2f7a7ZVW_eHKRhYpGqoHhcMBldFYBiqACiFoJCserRI8h5mZvWxM9mLkZ7HvLttah4R0O8IDiN69-1bvXqxGWEovlCClL0IRufxb5OxeeYoZk853aTM_l0lgdd6gbMidXyviBNCcauBtCuHmh2S6qCOo8Jr1Orqhg6JKSH_b-KxbTrRbySDGmw0xS7_rhNtcDdgVQdSUMUwNQ_LEISZk5bT_tdPS9Ju_BsYvEzOStFnZQLXqA-52-0G00" alt="AddMembers Diagram" /></p>
+<h3 id="Редагування-дозволів-учасників"><a class="header" href="#Редагування-дозволів-учасників">Редагування дозволів учасників</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>EditMemberPermissions</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Редагування дозволів учасників</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Адміністратор, система</td></tr>
@@ -243,7 +269,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Адміністратор відкриває список учасників<br>2. Змінює права доступу для конкретного користувача<br>3. Перевіряється коректність введених даних<br>4. Якщо все коректно, зберігаються зміни</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/XLB1Ji904BttAoRnx8bm0MCmqG_Hib4IBOJMn4CFfOrw8SKO0aVZ7zHIObDf-OMPF_BjBfQZ93IxCs_Uc_VQWHzSJuF7Xtidv3SkU2ShhcKbCuabuanYRYGA7SBF8Flcs2D-1x3W2g2ISm2N93FUSubdmnL98g-SuLAZNm6RjvFhWqYA6Tvh5Kr0O6kCR89Yegy_iY2kG5SRdIsMgN7RS6FAMlemW7ajrtUCHiYVjiDRtd4M_Wb_W08qdCDV90jPOdOEd5KnhKhYrlwSm9kZME0F6_9CE6RsQDsGDmuKJKUtTm6TABVRwNPC_Upc70bfvp2HOZLmwdnAisqcBv1OzrheALsuhlBzI-MDrF3goLMJO3JsJ5zvGwj2T0pmIpj1Y1jmfKSNtpPPBjiW_dsbuqdV6K03Ny0l" alt="EditMemberPermissions" /></p>
+<h3 id="Видалення-учасників"><a class="header" href="#Видалення-учасників">Видалення учасників</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>RemoveMembers</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Видалення учасників із проєкту</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Адміністратор, система</td></tr>
@@ -253,7 +279,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Адміністратор відкриває список учасників<br>2. Обирає учасників для видалення<br>3. Підтверджує дію<br>4. Видаляються учасники</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/XP6_IiDG5CRtFCK1PwVIfH6fe0-YwKK3cfGcWaE6D0LTf14fTLDyWrWQ2MbJN-4xR-IN2ysWGpE4UtD_v_kJEupYoqbyVtVh97Z16bjTej6bJZNJ58Lcs6cQECB7agvT3WIl1DUe2LLO4Lo8Jl63YkyTQj6PFg7Wfk5vJNRLJRxZYrXgP_vZGjMDvaBHYii26vGyRJJl13vQQyr8b9gI-QRAWdECFNU9M4w2C3OoyQzlOZaoNh_Nxzdl9rUd3D-wqMPETxPjerSiF6EKHwgy3JhqMCuypqJHkGbyCxfuyCmuziF0dfjWP5qSkqlmsRPdhX9R54dte_OzDATVfizayZ_5KRbxaOEN48vTPqXhtjal" alt="RemoveMembers Diagram" /></p>
+<h3 id="Створення-завдання"><a class="header" href="#Створення-завдання">Створення завдання</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>CreateTask</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Створення завдання</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -263,7 +289,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває проєкт<br>2. Натискає "Створити завдання"<br>3. Вводить назву, опис, дедлайн, виконавців<br>4. Підтверджує дію<br>5. Перевіряється коректність введених даних<br>6. Якщо все коректно, створюється завдання</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/VPBFIiD04CRlUOgXNkkfzDA8LAW77oEcYmPgMjee7d9eMhGNQK5A1K6aRn2MrZ-fQLzXvetyTeDH4ImqPEVxpSptiMaE8gyVNLvqd9WVUIj3VfD4HZ9cpQbCOeVmiunhNnl4zxBW5MS6jT2SU8V3bjSeZahi2TB8JEFCGXLUugoB7KOXVkKKXHMUEUSogtolC1m4S797K5EmMiPLGdc7Sb8bo6lyDz3UESTPmqy67JJOMxZKvS1duzckNyiGNIyoXYMK5Z9roI7BnRmiqcFm1wTnsMoQKDEWXpAJkN45RaPcdvKGd7F8IM5OcqNMO8w9DsGpsjV2KTYD5FM3i_E8zfHVhzLhjdnmUeZiDiP6fZ8n8qaIz9aBIKqcUMYKw3wTX5TU9sYtlCWxllPLBmgwuG_voFVLOD1IOQ3QltKLjWiJz1Mol1miBWF-kIBNiVo_tqgtvpfDBC17zGa0" alt="CreateTask Diagram" /></p>
+<h3 id="Редагування-завдання"><a class="header" href="#Редагування-завдання">Редагування завдання</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>EditTask</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Редагування завдання</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -273,7 +299,7 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває завдання<br>2. Вносить зміни (назва, опис, дедлайн, виконавці)<br>3. Натискає "Зберегти"<br>4. Перевіряється коректність введених даних<br>5. Якщо все коректно, зберігаються зміни</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/VLB1Jl906BptAJRybzz4JuGB68E9FeYMZP9e8L0J3pr0YN8na1XI4XDZV8DQQ4IWy0hplP6pMoWtsxJPtPbllfclhNVzgux_S7_d17Z3HdfOI5z26I11BCF0KRmifsQNLOLNYJ37qb0jQQAmvMQ3b8VXWOQCUdtgXVAYy8qrwp8ir7--O-vPUwnOjZKjkPeZvRCYzeEC-uJwI-A6dSYpH4U5zZlRXgQC16EWX2c-aD95Yfb1IgHQSe3FF16HDU9Wh_2nOoSIIK_6CZ4koHihqvEG3OECS3yFaF1EhKc6a2VZDywNkIslvMlLQTxS-kgVTYlbIjaUdrwVSHOsoaf6CZIIQZUM0MAJIwRLWdgYpbrNTxiNsclgnkMZgzj-i-LPN7kDl8lQfTYdbWWpIesA38TfrnpB_VFZjjerfqvn_WM_" alt="EditTask Diagram" /></p>
+<h3 id="Видалення-завдання"><a class="header" href="#Видалення-завдання">Видалення завдання</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">ID:</th><th style="text-align: left"><div style="width:500px"><code>DeleteTask</code></div></th></tr></thead><tbody>
 <tr><td style="text-align: left">Назва:</td><td style="text-align: left">Видалення завдання</td></tr>
 <tr><td style="text-align: left">Учасники:</td><td style="text-align: left">Користувач, система</td></tr>
@@ -283,17 +309,124 @@
 <tr><td style="text-align: left">Основний сценарій:</td><td style="text-align: left">1. Користувач відкриває завдання<br>2. Натискає "Видалити"<br>3. Підтверджує дію<br>4. Видаляється завдання</td></tr>
 </tbody></table>
 </div>
-<p><img src="https://www.plantuml.com/plantuml/png/VP71IiDG54Jt_OfBNRigtJGY5VH3D7reG9FIFC555jg2tKW3fKGGHFo3HqWrfCPlcFj7tdUBMObPXPd337VUEBNdCtjxSztBy89llaVD3ppd1KeuNcOzaa-PG7z7X3KNgD1uLA4DuHCEfOWEBLhEE_HLxBbFHADW7slKokrGUwVVeMy-LQGIMqckyC4BdrnnmQk0b8eJQsWMNLvPEZ3XS30Sg7nqSKoQss37ArwYvOAaijOp73zAnFEeGm_f90nDcfwQE3AJixlGJ6sKnEgRUB9laK8LChpl1y4MNt1Pjy7l6PppHdgUXCd_s47vVvTDfa5lBBto13y0" alt="DeleteTask Diagram" /></p>
+<h2 id="Короткий-огляд-продукту"><a class="header" href="#Короткий-огляд-продукту">Короткий огляд продукту</a></h2>
+<h2 id="Система-управління-проєктами-СУП"><a class="header" href="#Система-управління-проєктами-СУП">Система управління проєктами (СУП)</a></h2>
+<p>Система управління проєктами – це веб-платформа, розроблена для покращення координації командної роботи та оптимізації процесів управління проєктами. Вона допомагає компаніям ефективно планувати, контролювати та аналізувати виконання завдань, забезпечуючи прозорість робочих процесів.</p>
+<h3 id="Основна-мета-системи"><a class="header" href="#Основна-мета-системи">Основна мета системи</a></h3>
+<ul>
+<li>Автоматизація процесів управління проєктами.</li>
+<li>Мінімізація ризиків невчасного виконання завдань.</li>
+<li>Швидкий обмін інформацією між учасниками команди.</li>
+</ul>
+<p>Система підтримує як традиційні підходи до управління проєктами, так і сучасні гнучкі методології (Agile, Scrum).</p>
+<p>В основі роботи системи лежить інтерактивна платформа, що дозволяє:</p>
+<ul>
+<li>Створювати проєкти.</li>
+<li>Призначати відповідальних осіб.</li>
+<li>Встановлювати дедлайни.</li>
+<li>Розподіляти ресурси.</li>
+<li>Відстежувати статус виконання завдань.</li>
+</ul>
+<h3 id="Інтеграції"><a class="header" href="#Інтеграції">Інтеграції</a></h3>
+<p>Система інтегрується з популярними сервісами для командної роботи:</p>
+<ul>
+<li>Google Calendar</li>
+<li>Slack</li>
+<li>Microsoft Teams</li>
+<li>Git (GitHub, GitLab, Bitbucket)</li>
+</ul>
+<p>Це робить її універсальним рішенням для різних галузей бізнесу.</p>
+<h3 id="Гнучкість-та-доступність"><a class="header" href="#Гнучкість-та-доступність">Гнучкість та доступність</a></h3>
+<p>Завдяки налаштуванню ролей та рівнів доступу, система підходить як для малих стартапів, так і для великих корпорацій. Користувачі отримують персоналізовані панелі з необхідними інструментами.</p>
+<p>Система доступна у веб-версії та мобільному додатку, що дозволяє користувачам залишатися на зв’язку та оперативно реагувати на зміни.</p>
+<h2 id="Функціональність"><a class="header" href="#Функціональність">Функціональність</a></h2>
+<h3 id="Управління-проєктами"><a class="header" href="#Управління-проєктами">Управління проєктами</a></h3>
+<ul>
+<li>Створення, редагування, архівування проєктів</li>
+<li>Визначення цілей, дедлайнів і відповідальних осіб</li>
+<li>Створення та відстеження етапів виконання</li>
+</ul>
+<h3 id="Управління-завданнями"><a class="header" href="#Управління-завданнями">Управління завданнями</a></h3>
+<ul>
+<li>Додавання та редагування завдань</li>
+<li>Призначення виконавців і встановлення дедлайнів</li>
+<li>Відстеження статусу завдань (To Do, In Progress, Done)</li>
+<li>Візуалізація завдань у Kanban-дошці та списках</li>
+</ul>
+<h3 id="Календар-та-розклад"><a class="header" href="#Календар-та-розклад">Календар та розклад</a></h3>
+<ul>
+<li>Інтерактивний календар для перегляду дедлайнів</li>
+<li>Групування завдань за тижнями/місяцями</li>
+<li>Синхронізація з Google Calendar</li>
+</ul>
+<h3 id="Сповіщення-та-комунікація"><a class="header" href="#Сповіщення-та-комунікація">Сповіщення та комунікація</a></h3>
+<ul>
+<li>Автоматичні сповіщення про зміни у проєкті</li>
+<li>Вбудований чат для обговорення завдань</li>
+<li>Історія змін і коментарі</li>
+</ul>
+<h3 id="Аналітика-та-звітність"><a class="header" href="#Аналітика-та-звітність">Аналітика та звітність</a></h3>
+<ul>
+<li>Генерація детальних звітів щодо виконаних завдань</li>
+<li>Аналіз ефективності роботи команди</li>
+<li>Діаграми прогресу та використання ресурсів</li>
+</ul>
+<h3 id="Інтеграції-1"><a class="header" href="#Інтеграції-1">Інтеграції</a></h3>
+<ul>
+<li>Підключення до систем контролю версій (Git, GitHub, GitLab)</li>
+<li>Інтеграція з месенджерами (Slack, Microsoft Teams, Telegram)</li>
+<li>API для взаємодії з іншими сервісами</li>
+</ul>
+<p>Система дозволяє працювати як у веб-версії, так і через мобільний додаток. Завдяки автоматизованим процесам та гнучким налаштуванням, вона допомагає компаніям зменшити затрати часу на управління проєктами та підвищити продуктивність команди.</p>
+<h2 id="Практичність"><a class="header" href="#Практичність">Практичність</a></h2>
+<ul>
+<li>Інтуїтивно зрозумілий інтерфейс — зручна навігація, простий дизайн, що не перевантажений зайвими елементами.</li>
+<li>Гнучка система налаштувань — можливість персоналізації інтерфейсу під потреби користувача.</li>
+<li>Мультимовна підтримка — доступність для користувачів різних країн.</li>
+<li>Кросплатформеність — коректна робота на Windows, macOS, Linux, а також у мобільних версіях (iOS, Android).</li>
+<li>Автоматичне збереження — запобігання втраті важливих змін при раптовому відключенні.</li>
+<li>Візуалізація даних — діаграми Ганта, канбан-дошки, графіки продуктивності та інші інструменти для зручного відстеження прогресу.</li>
+<li>Гарячі клавіші та швидкий доступ до основних функцій для підвищення ефективності.</li>
+<li>Імпорт та експорт даних — можливість інтеграції з іншими сервісами та збереження копій даних у зручному форматі.</li>
+</ul>
+<h2 id="Надійність"><a class="header" href="#Надійність">Надійність</a></h2>
+<ul>
+<li>Двофакторна аутентифікація (2FA) для захисту облікових записів.</li>
+<li>Розмежування прав доступу — чіткий поділ ролей між адміністраторами, менеджерами та учасниками проєкту.</li>
+<li>Система шифрування для захисту конфіденційної інформації та безпечного обміну даними.</li>
+<li>Захист від DDoS-атак та інших кіберзагроз для стабільної роботи системи.</li>
+<li>Автоматичне резервне копіювання для збереження та відновлення даних у разі збоїв або втрати доступу.</li>
+<li>Моніторинг активності — виявлення підозрілої поведінки та сповіщення адміністратора.</li>
+<li>Журнал дій користувачів для прозорості та відстеження внесених змін.</li>
+</ul>
+<h2 id="Продуктивність"><a class="header" href="#Продуктивність">Продуктивність</a></h2>
+<ul>
+<li>Оптимізована швидкість роботи — мінімальний час відгуку системи.</li>
+<li>Підтримка багатопоточності — можливість одночасної роботи великої кількості користувачів без втрати продуктивності.</li>
+<li>Хмарні технології — інтеграція з Google Drive, OneDrive, Dropbox для збереження великих обсягів даних.</li>
+<li>Оптимізація використання ресурсів — економне споживання процесорної потужності та пам’яті.</li>
+<li>Кешування часто використовуваних даних для прискорення завантаження та роботи інтерфейсу.</li>
+<li>Автоматичне оновлення інформації в реальному часі без необхідності ручного оновлення сторінки.</li>
+</ul>
+<h2 id="Експлуатаційна-придатність"><a class="header" href="#Експлуатаційна-придатність">Експлуатаційна придатність</a></h2>
+<ul>
+<li>Цілодобова технічна підтримка — швидке реагування на запити користувачів.</li>
+<li>Оновлення та виправлення багів — регулярні оновлення для поліпшення продуктивності та безпеки.</li>
+<li>Зворотний зв’язок із користувачами — можливість залишати пропозиції та отримувати персональні рекомендації.</li>
+<li>Висока стійкість до навантажень — стабільна робота навіть за великої кількості користувачів.</li>
+<li>Доступність на різних пристроях — підтримка мобільних додатків та веб-версії.</li>
+<li>Автоматична діагностика системи — перевірка справності всіх модулів та виявлення можливих проблем.</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="stakeholders-needs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../docs/state-of-the-art.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="design.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../docs/use_cases.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -303,11 +436,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="stakeholders-needs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../docs/state-of-the-art.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="design.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../docs/use_cases.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -322,13 +455,13 @@
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 
