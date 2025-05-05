@@ -3,13 +3,13 @@
 ## Модель прецедентів
 
 ### Загальна схема
-![general-use-case-diagram.png](images_use_cases/general-use-case-diagram.png)
+![general-use-case-diagram.png](images_use_cases/general-use-case-diagram.drawio.png)
 
 ### Користувач
-![user-use-case-diagram.png](images_use_cases/user-use-case-diagram.png)
+![user-use-case-diagram.png](images_use_cases/user-use-case-diagram.drawio.png)
 
 ### Адміністратор
-![admin-use-case-diagram.png](images_use_cases/admin-use-case-diagram.png)
+![admin-use-case-diagram.png](images_use_cases/admin-use-case-diagram.drawio.png)
 
 ## Сценарії використання
 | ID:                | ` CreateAccount ` |
