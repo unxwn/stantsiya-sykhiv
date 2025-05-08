@@ -29,4 +29,9 @@ TaskColumnLink: завдання в колонці.
 </div>
 
 ### Реляційна схема
+<div style="text-align: center; margin: 5px 0px 20px;">
+  <img src="design-images/rel-schema.png"
+       width="700px" 
+       alt="Relational_schema">
+</div>
 
