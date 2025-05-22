@@ -1,9 +1,7 @@
 # Реалізація інформаційного та програмного забезпечення
 
-В рамках проекту розробляється: 
-- SQL-скрипт для створення на початкового наповнення бази даних
+### SQL-скрипт для створення на початкового наповнення бази даних:
 ```sql
--- MySQL Workbench Forward Engineering
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
@@ -165,7 +163,7 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ```
 
-- SQL-скрипт для заповнення
+### SQL-скрипт для заповнення
 ```sql
 -- User
 INSERT INTO `User` (id, username, email, passwordHash)
