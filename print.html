@@ -922,7 +922,7 @@
        alt="Relational_schema">
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Реалізація-інформаційного-та-програмного-забезпечення"><a class="header" href="#Реалізація-інформаційного-та-програмного-забезпечення">Реалізація інформаційного та програмного забезпечення</a></h1>
-<h3 id="sql-скрипт-для-створення-на-початкового-наповнення-бази-даних"><a class="header" href="#sql-скрипт-для-створення-на-початкового-наповнення-бази-даних">SQL-скрипт для створення на початкового наповнення бази даних:</a></h3>
+<h3 id="sql-скрипт-для-створення-бази-даних"><a class="header" href="#sql-скрипт-для-створення-бази-даних">SQL-скрипт для створення бази даних:</a></h3>
 <pre><code class="language-sql">-- -----------------------------------------------------
 -- Set custom settings
 -- -----------------------------------------------------
@@ -1073,7 +1073,7 @@ SET
   foreign_key_checks = @old_foreign_key_checks,
   unique_checks = @old_unique_checks;
 </code></pre>
-<h3 id="sql-скрипт-для-заповнення"><a class="header" href="#sql-скрипт-для-заповнення">SQL-скрипт для заповнення</a></h3>
+<h3 id="sql-скрипт-для-початкового-наповення-бази-даних"><a class="header" href="#sql-скрипт-для-початкового-наповення-бази-даних">SQL-скрипт для початкового наповення бази даних:</a></h3>
 <pre><code class="language-sql">INSERT INTO `user` (id, username, email, passwordHash)
 VALUES 
   (1, 'geyorgiy', 'geyorgi228@example.com', 'passwordHash'),
