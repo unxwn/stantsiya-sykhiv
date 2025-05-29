@@ -1,4 +1,5 @@
 # Тестування працездатності системи
 
-*В цьому розділі необхідно вказати засоби тестування, навести вихідні коди тестів та результати тестування.*
+Тестування здійснюється через застосунок [StantsiyaSykhivApi](https://github.com/unxwn/stantsiya-sykhiv/blob/main/src/scripts/README.md) за допомогою документації OpenAPI.
 
+[**Переглянути тестування**](https://github.com/unxwn/stantsiya-sykhiv/tree/main/test)
