@@ -1,0 +1,1 @@
+[Переглянути результати тестування](https://github.com/unxwn/stantsiya-sykhiv/blob/main/src/docs/test.md)
